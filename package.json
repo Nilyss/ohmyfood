@@ -1,11 +1,19 @@
 {
   "name": "ohmyfood",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "sass": "sass --watch ./sass/main.scss:./public/css/styles.css"
   },
   "author": "Nicolas DECRESSAC",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/n-decressac/ohmyfood.git"
+  },
+  "bugs": {
+    "url": "https://github.com/n-decressac/ohmyfood/issues"
+  },
+  "homepage": "https://github.com/n-decressac/ohmyfood#readme",
+  "description": ""
 }
