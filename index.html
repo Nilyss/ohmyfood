@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
@@ -17,12 +17,46 @@
                 <i class="location__icon fas fa-map-marker-alt"></i>
                 <input class="location__input" type="text" name="location" placeholder="Paris, Belleville">
             </form>
-            <article class="searchBtn">
+            <article class="search">
                 <h2>Réservez le menu qui vous convient</h2>
                 <p>Découvrez des restaurants d'exception, séléctionnés par nos soins.</p>
-                <button>Explorer nos restaurants</button>
+                <nav class="search__btn"><a href="#">Explorer nos restaurants</a></nav>
+            </article>
+            <article class="order">
+                <h2>Fonctionnement</h2>
+                <nav>
+                    <ul class="order__list">
+                        <li class="order__list--btn"><a href="#"><span class="order__list__number">1</span><i class="btnIcon fas fa-mobile-alt"></i>Choisissez un restaurant</a></li>
+                        <li class="order__list--btn"><a href="#"><span class="order__list__number">2</span><i class="btnIcon fas fa-list-ul"></i>Composez votre menu</a></li>
+                        <li class="order__list--btn"><a href="#"><span class="order__list__number">3</span><i class="btnIcon--alt fas fa-store"></i>Dégustez au restaurant</a></li>
+                    </ul>
+                </nav>
+            </article>
+            <article class="card">
+                <h2>Restaurants</h2>
+                <div class="card1">
+                    <div class="card1__img"><p class="new">Nouveau</p><img src="./public/i5mg/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="picture_la_palette_du_gout"></div>
+                    <div class="card1__body">
+                        <div class="card1__body__title"><p>La palette du goût</p></div>
+                        <div class="card1__body__location"><p>Ménilmontant</p></div>
+                        <div class="card1__body__favorite"><i class="icon--heart far fa-heart"></i></div>
+                    </div>
+                </div>
+                <div class="card2"></div>
+                <div class="card3"></div>
+                <div class="card4"></div>
             </article>
         </main>
-        <footer></footer>
+        <footer>
+            <h2>ohmyfood</h2>
+            <nav>
+                <ul>
+                    <li>Proposer un restaurant</li>
+                    <li>Devenir partenaire</li>
+                    <li>Mentions légales</li>
+                    <li>Contact</li>
+                </ul>
+            </nav>
+        </footer>
     </body>
 </html>
