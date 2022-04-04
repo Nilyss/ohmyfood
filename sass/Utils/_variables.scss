@@ -3,6 +3,8 @@ $clrSecondary: #FF79DA;
 $clrTertiary: #99E2D0;
 $clrLocation: #eaeaea;
 $clrBackground: #f6f6f6;
+$gradient: linear-gradient($clrSecondary, $clrPrimary);
+$gradientIcon: linear-gradient($clrPrimary, $clrSecondary);
 
 $fontLogoAndTitles: 'Shrikhand';
 $fontTxt: 'Roboto';

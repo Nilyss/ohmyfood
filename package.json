@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch ./sass/main.scss:./public/css/styles.css"
+    "sass": "sass --watch ./sass/main.scss:./public/css/index_style.css"
   },
   "author": "Nicolas DECRESSAC",
   "license": "ISC",
