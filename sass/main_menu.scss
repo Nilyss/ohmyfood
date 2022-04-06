@@ -55,3 +55,9 @@ z-index: -1;
 footer {
     @include footer;
 }
+
+// Animation section
+
+.btn {
+    animation: fadeIn 2500ms;
+}
