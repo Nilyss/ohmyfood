@@ -1,4 +1,41 @@
 @import "./variables";
+@import "./keyframes";
+
+@mixin body-position {
+    max-width: 750px;
+    min-width: 320px;
+    margin: auto;
+    box-sizing: border-box;
+    margin-bottom: -50rem;
+}
+
+@mixin footer {
+    padding-top: 1.5rem;
+    padding-bottom: 1rem;
+    background: #353535;
+    img{        
+        width: 7rem;
+        filter: invert(1);
+        @include margin-left-and-right;
+    }
+    ul {
+        list-style: none;
+        padding-inline-start: 0;
+    }
+    li {        
+        margin-bottom: .5rem;
+        font-family: $fontTxt;
+        @include margin-left-and-right;  
+        a {
+            text-decoration: none;
+            color: #fff;
+        }      
+    }
+    .icon {
+        margin-right: .5rem;
+        font-size: .8rem;
+    }
+}
 
 @mixin box-shadow {
     box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.281);
@@ -34,90 +71,202 @@
     font-size: .7rem;
 }
 
-@mixin card {
-    position: relative;
-    margin: auto;            
-    margin-bottom: 1rem;
-    width: 20rem;
-    height: 15.2rem;
-    background: #fff;
-    border-radius: 1rem 1rem 1rem 1rem;
-    overflow: hidden;
-    & a {
-        text-decoration: none;
+
+@mixin header {    
+    padding-left: 1.5rem;
+    padding-right: 3rem;
+    display: flex;
+    align-items: center;
+    padding-top: 1rem;      
+    padding-bottom: .5rem;
+    @include box-shadow;
+    .fa-arrow-left {
+        font-size: 1.3rem;
+        font-weight: 700;
         color: #000;
+    }
+    h1 {
+        font-family: $fontLogoAndTitles;
+        font-weight: 700;
+        color: #000;
+        width: fit-content;
+        margin: auto;
+        justify-content: center;
+    }
+}
+
+@mixin background {
+    figure {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+    }       
+    .menu__background {
+    width: 100%;
+    height: 320px;        
+    object-fit: cover;
+    object-position: -5rem 0;
+    position: relative;
+    z-index: -1;
+    }  
+}
+
+@mixin restaurants {
+    margin-top: 4rem;
+    padding-top: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    background: $clrBackground;
+    h2 {
+        font-family: $fontTxt;
+        font-weight: 700;
+    }
+    .card {
+        @include box-shadow;
+        border-radius: 1rem 1rem 1rem 1rem;
+        margin-bottom: 1.5rem;
+        
+        a { 
+            text-decoration: none;
+            color: #000;          
+            display: flex;
+            flex-flow: column;
+            figure {
+                border-radius: 1rem 1rem 0 0;
+                margin: 0;
+                padding: 0; 
+                overflow: hidden; 
+                height: 150px;        
+                .card__img {
+                    width: 100%;
+                    height: 150px;
+                    object-fit: cover;
+                }
+            }
+            .card__body {
+                margin-top: .1rem;
+                margin-left: 1rem;
+                margin-right: 1rem;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                &__label {
+                    h3 {
+                        font-family: $fontTxt;
+                        font-weight: 700;
+                        margin-bottom: -.5rem;
+                        font-size: 1rem;
+                    }
+                    p {
+                        font-family: $fontTxt;
+                        font-weight: 400;
+                        font-size: .91rem;
+                    }
+                }
+                &__favorite {                 
+                    font-size: 1.4rem;
+                    color: grey;
+                    cursor: pointer;
+                    .fas {
+                        opacity: 0;
+                        &:hover {
+                            opacity: 1;                         
+                            background: linear-gradient(#9356DC, #FF79DA);
+                            background-clip: text;
+                            -webkit-background-clip: text;
+                            -webkit-text-fill-color: transparent;
+                        }
+                    }
+                }
+            }  
+        }
+    }
+}
+
+@mixin menu-body {
+    background: $clrBackground;
+    margin-top: -15%;
+    padding: .8rem;
+    border-radius: 2rem 2rem 0 0;    
+    .card__header {
+        margin-bottom: -1rem;
+        padding-right: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        h2 {
+            font-family: $fontLogoAndTitles;
+            font-size: 1.4rem;
+        }
+        &__favorite {                 
+            font-size: 1.4rem;
+            color: grey;
+            cursor: pointer;
+            .fas {
+                opacity: 0;
+                &:hover {
+                    opacity: 1;                         
+                    background: linear-gradient(#9356DC, #FF79DA);
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                }
+            }
+        }
+    }
+    h3 {
+        text-transform: uppercase;
+        font-family: $fontTxt;
+        font-size: .9rem;
+        font-weight: 400;
+        position: relative;
+        margin-top: 2.5rem;
+        margin-bottom: 1.5rem;
+        &::after {
+        content:"";
+        position: absolute;        
+        bottom: -.5rem;
+        width: 10%;
+        display: block;
+        height: .2rem;
+        background-color: $clrTertiary;
+        }
+    }
+    p {
+        font-size: .9rem;
         font-family: $fontTxt;
     }
 
-    &__img {        
-        width: 20.5rem;
-        height: 11rem;
-    }
-
-    &__img img {
-        border-radius: 1rem 1rem 0 0;
-        width: 100%;
-        object-position: 0 -50px;
-        object-fit: cover;
-    }
-
-    &__new {
-        position: absolute;
-        top: .1rem;
-        right: 1rem;
-        border-radius: .2rem;
-        width: fit-content;
-        padding: .4rem;
-        padding-left: .5rem;
-        padding-right: .5rem;
-        font-weight: 600;
-        font-size: .9rem;
-        color: darken($color: $clrTertiary, $amount: 35);
-        background: $clrTertiary;
-    }
-
-    &__body {
-        margin-left: 1rem;
+    .btn {
+        @include box-shadow;
+        background: #fff;
+        border-radius: 1rem;
+        margin-bottom: .8rem;
+        padding-left: 1rem;
+        padding-right: 1.5rem;
         display: flex;
-        flex-flow: row nowrap;
-        justify-content: space-between;       
-        line-height: 0.3rem;       
-    }
-
-    &__favorite {
-        width: fit-content;
-        position: relative;
-        bottom: 2.5rem;
-        left: 16.4rem;
-        font-size: 1.4rem;
-        color: grey;
-        cursor: pointer;
-        &::before {
-            position: relative;
-            left: 1.01em;
-            font-size: 1.3rem;    
-            font-family: "Font Awesome 5 Free";
-            content: "\f004";            
+        flex-flow: column wrap;
+        &__title {
+            font-weight: 700;
+            margin-bottom: -.6rem;
         }
-        &:hover {        
-            color: transparent;
-            background: linear-gradient(#9356dc, #ff79da);
-            background-clip: text; 
-            font-weight: 900;
+        &__label {
+            display: flex;
+            justify-content: space-between;
+            &__name {
+                width: 70%;
+                font-size: .8rem;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+            &__price {
+                text-align: right;
+                font-weight: 700;
+                font-size: .85rem;
+            }
         }
     }
 }
 
-@mixin card2 {
-    &__img {        
-        width: 20.5rem;
-        height: 11rem;
-        overflow: hidden;        
-    }
-    &__img img {
-        border-radius: 1rem 1rem 0 0;
-        width: 100%;
-        object-position:0 -150px;
-        object-fit: cover;
-    }
-}
+

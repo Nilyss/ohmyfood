@@ -7,10 +7,7 @@
 @import "./Utils/keyframes";
 
 body {
-    max-width: 750px;
-    margin: auto;
-    box-sizing: border-box;
-    margin-bottom: -50rem;
+    @include body-position;
 }
 
 header {
@@ -138,57 +135,48 @@ header {
 
 //  Restaurant part 
 
-#cards { 
-    margin-top: 4rem;
-    padding-top: 2rem;
-    padding-bottom: 3rem;
-    background: $clrBackground;
-    h2 {
-        @include margin-left-and-right;
-        margin-bottom: 1.5rem;
-        font-weight: 700;
-        font-family: $fontTxt;
-    }
-    .card {
-        @include margin-left-and-right;
-        @include card;
-        @include box-shadow;
-    }
-    .card2 {
-        @include margin-left-and-right;
-        @include card2;
-        @include box-shadow;
-    }     
+#restaurants {
+   @include restaurants;   
 }
 
 
-
+.card2 {
+    border-radius: 1rem 1rem 0 0;
+    margin: 0;
+    padding: 0;
+    height: 150px;
+}
+.card2__img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+.card2__body {
+    margin-top: .1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &__label {
+        h3 {
+            font-family: $fontTxt;
+            font-weight: 700;
+            margin-bottom: -.5rem;
+            font-size: 1rem;
+        }
+        p {
+            font-family: $fontTxt;
+            font-weight: 400;
+            font-size: .91rem;
+        }
+    }
+}
 
 
 
 // footer part
 
 footer {
-    padding-top: 1.5rem;
-    padding-bottom: 1rem;
-    background: #353535;
-    color: #fff;
-    img{        
-        width: 7rem;
-        filter: invert(1);
-        @include margin-left-and-right;
-    }
-    ul {
-        list-style: none;
-        padding-inline-start: 0;
-    }
-    li {        
-        margin-bottom: .5rem;
-        font-family: $fontTxt;
-        @include margin-left-and-right;        
-    }
-    .icon {
-        margin-right: .5rem;
-        font-size: .8rem;
-    }
+    @include footer;
 }

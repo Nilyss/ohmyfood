@@ -1,0 +1,57 @@
+// Mobile first iphone 8 750px
+
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import "./Utils/variables";
+@import "./Utils/mixins";
+
+body {
+    @include body-position;
+}
+
+#header {
+    @include header;
+}
+
+.menu {
+    @include background;  
+    &__body {
+        @include menu-body;
+    }
+}
+
+      
+.menu__background--alt {
+width: 110%;
+height: 320px;        
+object-fit: cover;
+object-position: -1.2rem -8rem;
+position: relative;
+z-index: -1;
+} 
+
+.orderBtn {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    width: fit-content;
+    margin-top: 3rem;
+    margin-bottom: 4rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    background: $gradient;
+    border-radius: 30px;
+    @include box-shadow;
+
+    a {
+        font-family: $fontTxt;
+        text-decoration: none;
+        color: #fff;
+    }
+}
+
+footer {
+    @include footer;
+}
