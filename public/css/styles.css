@@ -50,6 +50,45 @@
     opacity: 1;
   }
 }
+@keyframes backgroundText {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@keyframes utensils {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(85%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+@keyframes loading {
+  0% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 @keyframes functioning {
   0% {
     background: #f6f6f6;
@@ -98,6 +137,45 @@
   }
   100% {
     opacity: 1;
+  }
+}
+@keyframes backgroundText {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@keyframes utensils {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(85%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+@keyframes loading {
+  0% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
 body {
@@ -369,6 +447,43 @@ footer li a {
 footer .icon {
   margin-right: 0.5rem;
   font-size: 0.8rem;
+}
+
+.loader {
+  display: flex;
+  justify-content: center;
+  pointer-events: none;
+}
+.loader::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  z-index: 999;
+  animation: loading 3500ms forwards ease;
+}
+.loader p {
+  padding: 5px;
+  z-index: 999;
+  display: flex;
+  flex-flow: column;
+  position: fixed;
+  top: 30%;
+  font-family: "Shrikhand";
+  font-size: 4rem;
+  background: linear-gradient(60deg, #9356DC, #99E2D0, #FF79DA);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 500% 500%;
+  animation: backgroundText 2500ms ease infinite, loading 3500ms forwards ease;
+}
+.loader__icon {
+  font-size: 4rem;
+  color: #99E2D0;
+  animation: utensils 2500ms ease infinite;
 }
 
 /*# sourceMappingURL=styles.css.map */
