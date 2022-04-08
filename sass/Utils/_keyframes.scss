@@ -54,3 +54,47 @@
         opacity: 1;
     }
 }
+
+
+@keyframes backgroundText {
+    0% {
+        background-position:0% 50%;
+    }
+    50% {
+        background-position:100% 50%;
+    }
+    100% {
+        background-position:0% 50%;
+    }
+   
+}
+
+@keyframes utensils {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(85%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes loading {
+    0%{ 
+        opacity: 1;
+    }
+    25% {
+        opacity: 1;
+    }
+    50%{
+        opacity: 1;
+    }
+    75%{
+        opacity: 1;
+    }
+    100%{
+        opacity:0;
+    }
+}
