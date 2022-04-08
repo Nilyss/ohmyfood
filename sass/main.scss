@@ -80,6 +80,9 @@ header {
             background: $gradient;
             border-radius: 30px;
             @include box-shadow;
+            &:hover {
+                animation: cardSelect 300ms forwards;
+            }
 
             a {
                 text-decoration: none;
@@ -116,6 +119,9 @@ header {
         list-style: none;
         @include list-btn;
         @include box-shadow;
+        &:hover {
+            animation: functioning 300ms forwards;
+        }
 
         .order__list__number {
             @include list-number;
@@ -172,7 +178,6 @@ header {
         }
     }
 }
-
 
 // footer part
 

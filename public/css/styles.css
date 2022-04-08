@@ -1,11 +1,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
-@keyframes fadeIn {
+@keyframes functioning {
   0% {
-    opacity: 0;
+    background: #f6f6f6;
+    box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.281);
   }
   100% {
-    opacity: 1;
+    background: #f2eafb;
+    box-shadow: 0px 10px 5px 0px rgba(0, 0, 0, 0.281);
+  }
+}
+@keyframes cardSelect {
+  0% {
+    box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.281);
+  }
+  100% {
+    box-shadow: 0px 10px 5px 0px rgba(0, 0, 0, 0.281);
   }
 }
 @keyframes loaderHeart {
@@ -16,6 +26,22 @@
     opacity: 1;
   }
 }
+@keyframes check {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 30%;
+  }
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 @keyframes fadeIn {
   0% {
     opacity: 0;
@@ -24,7 +50,49 @@
     opacity: 1;
   }
 }
+@keyframes functioning {
+  0% {
+    background: #f6f6f6;
+    box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.281);
+  }
+  100% {
+    background: #f2eafb;
+    box-shadow: 0px 10px 5px 0px rgba(0, 0, 0, 0.281);
+  }
+}
+@keyframes cardSelect {
+  0% {
+    box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.281);
+  }
+  100% {
+    box-shadow: 0px 10px 5px 0px rgba(0, 0, 0, 0.281);
+  }
+}
 @keyframes loaderHeart {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes check {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 30%;
+  }
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes fadeIn {
   0% {
     opacity: 0;
   }
@@ -84,7 +152,7 @@ header h1 {
   align-items: center;
   justify-content: center;
   flex-flow: column;
-  background: #f6f6f6;
+  background: #f6f6f6ff;
   font-family: "Roboto";
 }
 #search h2 {
@@ -102,6 +170,9 @@ header h1 {
   background: linear-gradient(#FF79DA, #9356DC);
   border-radius: 30px;
   box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.281);
+}
+#search .search__btn:hover {
+  animation: cardSelect 300ms forwards;
 }
 #search .search__btn a {
   text-decoration: none;
@@ -135,10 +206,13 @@ header h1 {
   padding: 1.5rem;
   margin-bottom: 1.5rem;
   border-radius: 1rem;
-  background: #f6f6f6;
+  background: #f6f6f6ff;
   font-family: "Roboto";
   font-weight: 700;
   box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.281);
+}
+#order li:hover {
+  animation: functioning 300ms forwards;
 }
 #order li .order__list__number {
   width: 1.5rem;
@@ -167,7 +241,7 @@ header h1 {
   padding-top: 2rem;
   padding-left: 1rem;
   padding-right: 1rem;
-  background: #f6f6f6;
+  background: #f6f6f6ff;
 }
 #restaurants h2 {
   font-family: "Roboto";
@@ -177,6 +251,9 @@ header h1 {
   box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.281);
   border-radius: 1rem 1rem 1rem 1rem;
   margin-bottom: 1.5rem;
+}
+#restaurants .card:hover {
+  animation: cardSelect 300ms forwards;
 }
 #restaurants .card a {
   text-decoration: none;
@@ -224,7 +301,7 @@ header h1 {
   opacity: 0;
 }
 #restaurants .card a .card__body__favorite .fas:hover {
-  animation: loaderHeart 300ms forwards;
+  animation: loaderHeart 500ms forwards;
   background: linear-gradient(#9356DC, #FF79DA);
   background-clip: text;
   -webkit-background-clip: text;
