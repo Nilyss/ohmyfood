@@ -9,13 +9,11 @@
 body {
     @include body-position;
 }
-
 header {
     padding-top: 1rem;      
     padding-bottom: 1rem;
     @include box-shadow;
 }
-
 header {
     h1 {
     font-family: $fontLogoAndTitles;
@@ -26,6 +24,7 @@ header {
     justify-content: center;
     }  
 }
+
 // Banner part
 
 .location {    
@@ -117,14 +116,31 @@ header {
     li { 
         position: relative;
         list-style: none;
-        @include list-btn;
+        display: flex;
+        justify-content: center;
+        padding: 1.5rem;
+        margin-bottom: 1.5rem;
+        border-radius: 1rem;
+        background: $clrBackground;
+        font-family: $fontTxt;
+        font-weight: 700;
         @include box-shadow;
         &:hover {
             animation: functioning 300ms forwards;
         }
 
         .order__list__number {
-            @include list-number;
+            width: 1.5rem;
+            height: 1.5rem;
+            color: #fff;
+            background: $clrPrimary;
+            border-radius: 1rem;    
+            position: absolute;
+            left: -.7rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: .7rem;
         }  
         
         .btnIcon {
@@ -142,7 +158,78 @@ header {
 //  Restaurant part 
 
 #restaurants {
-   @include restaurants;   
+    margin-top: 4rem;
+    padding-top: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    background: $clrBackground;
+    h2 {
+        font-family: $fontTxt;
+        font-weight: 700;
+    }
+    .card {
+        @include box-shadow;
+        border-radius: 1rem 1rem 1rem 1rem;
+        margin-bottom: 1.5rem;
+        &:hover {
+            animation: cardSelect 300ms forwards;
+        }
+        
+        a { 
+            text-decoration: none;
+            color: #000;          
+            display: flex;
+            flex-flow: column;
+            figure {
+                border-radius: 1rem 1rem 0 0;
+                margin: 0;
+                padding: 0; 
+                overflow: hidden; 
+                height: 150px;        
+                .card__img {
+                    width: 100%;
+                    height: 150px;
+                    object-fit: cover;
+                }
+            }
+            .card__body {
+                margin-top: .1rem;
+                margin-left: 1rem;
+                margin-right: 1rem;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                &__label {
+                    h3 {
+                        font-family: $fontTxt;
+                        font-weight: 700;
+                        margin-bottom: -.5rem;
+                        font-size: 1rem;
+                    }
+                    p {
+                        font-family: $fontTxt;
+                        font-weight: 400;
+                        font-size: .91rem;
+                    }
+                }
+                &__favorite {                 
+                    font-size: 1.4rem;
+                    color: grey;
+                    cursor: pointer;
+                    .fas {
+                        opacity: 0;
+                        &:hover {
+                            animation: loaderHeart 500ms forwards;                        
+                            background: linear-gradient(#9356DC, #FF79DA);
+                            background-clip: text;
+                            -webkit-background-clip: text;
+                            -webkit-text-fill-color: transparent;
+                        }
+                    }
+                }
+            }  
+        }
+    } 
 }
 
 

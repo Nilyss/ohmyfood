@@ -3,10 +3,12 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch ./sass/main.scss:./public/css/styles.css ./sass/main_menu.scss:./public/css/styles_menu.css"
+    "sass": "sass --watch ./sass/main.scss:./public/css/styles.css ./sass/main_menu.scss:./public/css/styles_menu.css -w --style compressed",
+    "prefix": "postcss ./public/css/styles.css ./public/css/styles_menu.css --use autoprefixer -d ./public/css/prefixed/"
   },
   "author": "Nicolas DECRESSAC",
   "license": "ISC",
+  "browserslist": "last 4 versions",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/n-decressac/ohmyfood.git"
