@@ -186,9 +186,12 @@ header {
     @media (min-width: $breakpoint-tablet) {
         display: flex;
         flex-flow: wrap row;
+        width: 100%;
     }
     @media (min-width: $breakpoint-desktop){
         margin-bottom: 2rem;
+        display: flex;
+        flex-flow: wrap row;
     }
     margin-top: 4rem;
     padding-top: 2rem;
@@ -392,7 +395,7 @@ footer {
     }
     &__icon {
         position: absolute;
-        top: 45%;
+        top: 55%;
         z-index: 999;
         font-size: 3rem;        
         background: linear-gradient(60deg, #9356DC, #99E2D0, #FF79DA );
