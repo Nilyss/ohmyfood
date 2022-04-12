@@ -61,13 +61,16 @@
 }
 @keyframes utensils {
     0% {
-        transform: translateX(0);
+        opacity: 0;
+        transform: translateX(-283%);
     }
     50% {
-        transform: translateX(85%);
+        opacity: 1;
+        transform: translateX(190%);
     }
     100% {
-        transform: translateX(0%);
+        opacity: 0;
+        transform: translateX(-283%);
     }
 }
 @keyframes loading {
