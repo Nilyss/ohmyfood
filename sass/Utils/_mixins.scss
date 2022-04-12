@@ -2,7 +2,7 @@
 @import "./keyframes";
 
 @mixin body-position {
-    max-width: 750px;
+    max-width: 768px;
     min-width: 320px;
     margin: auto;
     box-sizing: border-box;
@@ -44,4 +44,19 @@
 @mixin margin-left-and-right {
     margin-left: 1.5rem;
     margin-right: 1.5rem;
+}
+
+@mixin new {
+    position: absolute;
+    background: $clrTertiary;
+    top: 5%;
+    left: 65%;
+    z-index: 2;
+    border-radius: .2rem;
+    font-family: $fontTxt;
+    font-weight: 700;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-size: 1rem;
+    color: darken($color: #99E2D0, $amount: 35)
 }
