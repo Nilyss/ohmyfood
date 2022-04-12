@@ -225,10 +225,12 @@ body {
 }
 .menu__background--alt {
     @media (min-width: $breakpoint-tablet) {
+        object-position: -1.2rem -50rem;
         height: 50rem;
     }
-    @media (min-width: $breakpoint-desktop) {
-        height: 50rem;
+    @media (min-width: $breakpoint-desktop) {        
+    object-position: -1.2rem -50rem;
+    height: 50rem;
     }
 width: 110%;
 height: 320px;        
