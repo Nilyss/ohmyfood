@@ -8,6 +8,16 @@
         box-shadow: 0px 10px 5px 0px rgba(0, 0, 0, 0.281);
     }
 }
+
+@keyframes iconColor {
+    0% {
+        color: grey;
+    }
+    100% {
+        color: #9356DC;
+    }
+}
+
 @keyframes cardSelect {
     0% {
         box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.281);
